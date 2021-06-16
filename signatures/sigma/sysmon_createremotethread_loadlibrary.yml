@@ -1,10 +1,15 @@
-title: T1055 CreateRemoteThread API and LoadLibrary
+title: CreateRemoteThread API and LoadLibrary
+id: 0ac41328-1413-4aac-8ae6-48489d0609db
 description: Detects potential use of CreateRemoteThread api and LoadLibrary function to inject DLL into a process 
 status: experimental
 date: 2019/08/11
-author: Roberto Rodriguez @Cyb3rWard0g
+author: Roberto Rodriguez (Cyb3rWard0g), OTR (Open Threat Research)
+tags:
+    - attack.defense_evasion
+    - attack.privilege_escalation
+    - attack.t1055.001
 references:
-    - https://github.com/Cyb3rWard0g/ThreatHunter-Playbook/tree/master/playbooks/windows/05_defense_evasion/T1055_process_injection/dll_injection_createremotethread_loadlibrary.md
+    - https://threathunterplaybook.com/notebooks/windows/05_defense_evasion/WIN-180719170510.html
 logsource:
     product: windows
     service: sysmon

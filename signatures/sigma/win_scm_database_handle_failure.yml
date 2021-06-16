@@ -1,10 +1,14 @@
-title: T1000 SCM Database Handle Failure
+title: SCM Database Handle Failure
+id: 511ec1ef-6ef9-4cc6-80bd-ff770a58eef6
 description: Detects non-system users failing to get a handle of the SCM database.
 status: experimental
 date: 2019/08/12
-author: Roberto Rodriguez @Cyb3rWard0g
+author: Roberto Rodriguez (Cyb3rWard0g), OTR (Open Threat Research)
+tags:
+    - attack.discovery
+    - attack.t1007
 references:
-    - https://github.com/Cyb3rWard0g/ThreatHunter-Playbook/tree/master/playbooks/windows/07_discovery/T1000_local_admin_check/local_admin_remote_check_openscmanager.md
+    - https://threathunterplaybook.com/notebooks/windows/07_discovery/WIN-190826010110.html
 logsource:
     product: windows
     service: security
@@ -14,8 +18,9 @@ detection:
         ObjectType: 'SC_MANAGER OBJECT'
         ObjectName: 'servicesactive'
         Keywords: "Audit Failure"
+    filter:
         SubjectLogonId: "0x3e4"
-    condition: selection
+    condition: selection and not filter
 falsepositives:
     - Unknown
 level: critical

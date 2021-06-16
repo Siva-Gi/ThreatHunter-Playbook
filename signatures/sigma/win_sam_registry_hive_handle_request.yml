@@ -1,13 +1,14 @@
-title: T1012 SAM Registry Hive Handle Request
+title: SAM Registry Hive Handle Request
+id: 750749d5-1ae2-4992-b356-988acdcc19bf
 description: Detects handles requested to SAM registry hive
 status: experimental
 date: 2019/08/12
-author: Roberto Rodriguez @Cyb3rWard0g
-references:
-    - https://github.com/Cyb3rWard0g/ThreatHunter-Playbook/tree/master/playbooks/windows/07_discovery/T1012_query_registry/sam_registry_hive_access.md
+author: Roberto Rodriguez (Cyb3rWard0g), OTR (Open Threat Research)
 tags:
-    - attack.discovery
-    - attack.t1012
+    - attack.credential_access
+    - attack.t1003.002
+references:
+    - https://threathunterplaybook.com/notebooks/windows/07_discovery/WIN-190725024610.html
 logsource:
     product: windows
     service: security

@@ -1,10 +1,14 @@
-title: T1086 Remote PowerShell Sessions
+title: Remote PowerShell Sessions
+id: 751187cf-5d76-467d-a99b-520ab9795500
 description: Detects basic PowerShell Remoting by monitoring for network inbound connections to ports 5985 OR 5986
 status: experimental
 date: 2019/09/12
-author: Roberto Rodriguez @Cyb3rWard0g
+author: Roberto Rodriguez (Cyb3rWard0g), OTR (Open Threat Research)
+tags:
+    - attack.execution
+    - attack.t1059.001
 references:
-    - https://github.com/Cyb3rWard0g/ThreatHunter-Playbook/tree/master/playbooks/windows/02_execution/T1086_powershell/powershell_remote_session.md
+    - https://threathunterplaybook.com/notebooks/windows/02_execution/WIN-190511223310.html
 logsource:
     product: windows
     service: security
